@@ -7,6 +7,7 @@ import '../../../core/widgets/custom_text.dart';
 import '../../../core/widgets/my_button.dart';
 import '../../../core/widgets/my_text_button.dart';
 import '../../../core/widgets/my_text_field.dart';
+import '../../home/views/home_view.dart';
 import 'sign_up.dart';
 import 'widgets/bottom_bar.dart';
 import 'widgets/social_login.dart';
@@ -49,7 +50,7 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: AppConstant.kPadding * 2),
               MyTextButton(title: 'Forget password?', onPressed: () {}),
               const Gap(AppConstant.kPadding),
-              const MyButton(title: 'Sign In'),
+               MyButton(title: 'Sign In',onPressed: ()=>AppRouter.pushAndRemoveUntil(const HomeView()),),
               const SocialLogin(),
             ],
           ),

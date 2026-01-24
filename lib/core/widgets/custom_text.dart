@@ -10,18 +10,21 @@ class CustomText extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.fontColor,
+    this.maxLines,
   });
 
   final String title;
   final double ?fontSize;
   final FontWeight ?fontWeight;
   final Color ?fontColor;
+  final int ?maxLines;
 
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
+      maxLines:maxLines ,
       style: GoogleFonts.montserrat(
         fontSize: fontSize??AppFontSize.fs16,
         fontWeight: fontWeight??AppFontWeight.fwMedium,
